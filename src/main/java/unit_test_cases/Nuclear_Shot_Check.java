@@ -12,5 +12,4 @@ public class Nuclear_Shot_Check implements I_Nuclear_Shot_Check {
 				return true;
 		return false;
 	}
-	
 }

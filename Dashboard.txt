@@ -1,0 +1,49 @@
+Given: I need to encrypt a message
+when: the message is encrypted
+then: each letter is shifted down the alphabet by double the number of that letter in the alphabet(abc would become bdf).
+and: if the letter would be shifted past the last letter in the alphabet, then it loops around again starting at the beginning
+and: if the letter does not get looped around again it should be lower case
+and: if the letter does get looped it should be upper case
+
+Name :- name ||  Shot :- counter ||  Result :- result
+Name :- name ||  Shot :- counter ||  Result :- result
+Name :- name ||  Shot :- counter ||  Result :- result
+Name :- name ||  Shot :- counter ||  Result :- result
+Name :- Ab ||  Shot :- 0 ||  Result :- Not
+Name :- Ab ||  Shot :- 0 ||  Result :- Not
+Name :- Ab ||  Shot :- 0 ||  Result :- Not
+Name :- Ab ||  Shot :- 0 ||  Result :- Win
+Name :- ab ||  Shot :- 0 ||  Result :- Not
+Name :- ab ||  Shot :- 1 ||  Result :- Not
+Name :- ab ||  Shot :- 2 ||  Result :- Not
+Name :- ab ||  Shot :- 3 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Loss
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Lose
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Lose
+Name :- Ab ||  Shot :- 2 ||  Result :- Lose
+Name :- Abc ||  Shot :- 2 ||  Result :- Win
+Name :- A ||  Shot :- 2 ||  Result :- Win
+Name :- Krunal ||  Shot :- 1 ||  Result :- Not
+Name :- Akshay ||  Shot :- 1 ||  Result :- Not
+Name :- Krunal ||  Shot :- 2 ||  Result :- Win
+Name :- Akshay ||  Shot :- 2 ||  Result :- Not
+Name :- Akshay ||  Shot :- 1 ||  Result :- Lose
+Name :- Krunal ||  Shot :- 1 ||  Result :- Lose
+Name :- Akshay ||  Shot :- 2 ||  Result :- Lose
+Name :- Krunal ||  Shot :- 2 ||  Result :- Win
+Name :- Frank ||  Shot :- 1 ||  Result :- Lose
+Name :- sneha ||  Shot :- 1 ||  Result :- Lose
+Name :- Frank ||  Shot :- 2 ||  Result :- Lose
+Name :- sneha ||  Shot :- 2 ||  Result :- Lose
+Name :- Frank ||  Shot :- 3 ||  Result :- Lose
+Name :- sneha ||  Shot :- 3 ||  Result :- Lose
+Name :- Frank ||  Shot :- 4 ||  Result :- Win
+Name :- sneha ||  Shot :- 4 ||  Result :- Lose

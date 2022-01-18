@@ -69,4 +69,6 @@ public class Nuclear_Shot_Check_test {
 		//Then :  hit target
 		assertEquals(false, result);
 	}
+	
+	
 }
