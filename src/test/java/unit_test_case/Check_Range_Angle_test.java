@@ -1,7 +1,6 @@
 package unit_test_case;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
 
 import unit_test_cases.*;

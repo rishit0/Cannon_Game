@@ -48,18 +48,13 @@ public class App_Config {
 	{
 		return new Flying_Shot();
 	}
-	@Bean(name="I_Dashboard")
-	public Dashboard create_Dashboard()
-	{
-		return new Dashboard();
-	}
-	
+
 	
 	
 	@Bean(name="I_Flow_Class")
 	public Flow_Class creatFizzBuzz_flow_test()
 	{
-		return new Flow_Class(create_Int_Checker(),create_Range_Angle(),create_Range_Velocity(),create_Calc_Angle(),create_Calc_Coordinates_x(),create_Calc_Coordinates_y(),creat_Hit_Check(),create_Nuclear_Shot_Check(),create_Flying_Shot(),create_Dashboard());
+		return new Flow_Class(create_Int_Checker(),create_Range_Angle(),create_Range_Velocity(),create_Calc_Angle(),create_Calc_Coordinates_x(),create_Calc_Coordinates_y(),creat_Hit_Check(),create_Nuclear_Shot_Check(),create_Flying_Shot());
 	}
 	@Bean(name="I_For_Multiplayer")
 	public For_Multiplayer creatFor_Multiplayer()

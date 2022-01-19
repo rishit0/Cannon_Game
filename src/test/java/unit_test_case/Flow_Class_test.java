@@ -43,15 +43,13 @@ public class Flow_Class_test {
 	@Mock
 	I_Flying_Shot i_flying_shot;
 	
-	@Mock
-	I_Dashboard i_dashboard;
 	
 	@Test
 	public void Flow_1_1_For_Integer_check_called_once() {
 		//Given :- I am user ( X = 7 , Y=7 ).
 		//When :- I enter angle 1 & Velocity 1
 		given(i_check_integer.Check_Integer("1","1")).willReturn(true);
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("1", "1","7","7","N","A",1,1);
 		
 		//Then :- Check_integer function called one time.
@@ -65,7 +63,7 @@ public class Flow_Class_test {
 		//When :- I enter angle 1 & Velocity 1
 		given(i_check_integer.Check_Integer("1","1")).willReturn(true);
 		given(i_check_range_angle.ValidAngleRange("1")).willReturn(true);
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("1", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -79,7 +77,7 @@ public class Flow_Class_test {
 		given(i_check_integer.Check_Integer("1","1")).willReturn(true);
 		given(i_check_range_angle.ValidAngleRange("1")).willReturn(true);         
 		given(i_check_range_velocity.ValidVelocityRange("1")).willReturn(true);
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("1", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidVelocityRange function called one time.
@@ -94,7 +92,7 @@ public class Flow_Class_test {
 		given(i_check_range_angle.ValidAngleRange("1")).willReturn(true);         
 		given(i_check_range_velocity.ValidVelocityRange("1")).willReturn(true);
 		given(i_calc_angle.Angle_in_Degree("1")).willReturn("0.017453");
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("1", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -110,7 +108,7 @@ public class Flow_Class_test {
 		given(i_check_range_velocity.ValidVelocityRange("1")).willReturn(true);
 		given(i_calc_angle.Angle_in_Degree("1")).willReturn("0.017453");
 		given(i_calc_x.Coordinate_X("0.017453", "1")).willReturn("1");
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("1", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -126,7 +124,7 @@ public class Flow_Class_test {
 		given(i_check_range_velocity.ValidVelocityRange("1")).willReturn(true);
 		given(i_calc_angle.Angle_in_Degree("1")).willReturn("0.017453");
 		given(i_calc_y.Coordinate_Y("0.017453", "1")).willReturn("0");
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("1", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -144,7 +142,7 @@ public class Flow_Class_test {
 		given(i_hit_check.Comp_Coordinates("7", "7", "1", "0")).willReturn(false);
 		given(i_calc_x.Coordinate_X("0.017453", "1")).willReturn("1");
 		given(i_calc_y.Coordinate_Y("0.017453", "1")).willReturn("0");
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("1", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -156,7 +154,7 @@ public class Flow_Class_test {
 		//Given :- I am user ( X = 7 , Y=7 ).
 		//When :- I enter angle one & Velocity 1
 		given(i_check_integer.Check_Integer("one","1")).willReturn(true);
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("one", "1","7","7","N","A",1,1);
 		
 		//Then :- Check_integer function called one time.
@@ -169,7 +167,7 @@ public class Flow_Class_test {
 		//Given :- I am user ( X = 7 , Y=7 ).
 		//When :- I enter angle one & Velocity 1
 		given(i_check_integer.Check_Integer("one","1")).willReturn(false);   
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("one", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -181,7 +179,7 @@ public class Flow_Class_test {
 		//Given :- I am user ( X = 7 , Y=7 )
 		//When :- I enter angle one & Velocity 1
 		given(i_check_integer.Check_Integer("one","1")).willReturn(false);   
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("one", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidVelocityRange function called one time.
@@ -193,7 +191,7 @@ public class Flow_Class_test {
 		//Given :- I am user ( X = 7 , Y=7 ).
 		//When :- I enter angle one & Velocity 1
 		given(i_check_integer.Check_Integer("one","1")).willReturn(false);  
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("one", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -205,7 +203,7 @@ public class Flow_Class_test {
 		//Given :- I am user ( X = 7 , Y=7 ).
 		//When :- I enter angle one & Velocity 1
 		given(i_check_integer.Check_Integer("one","1")).willReturn(false);  
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("one", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -217,7 +215,7 @@ public class Flow_Class_test {
 		//Given :- I am user ( X = 7 , Y=7 ).
 		//When :- I enter angle one & Velocity 1
 		given(i_check_integer.Check_Integer("one","1")).willReturn(false);  
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("one", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
@@ -229,7 +227,7 @@ public class Flow_Class_test {
 		//Given :- I am user ( X = 7 , Y=7 ).
 		//When :- I enter angle one & Velocity 1
 		given(i_check_integer.Check_Integer("one","1")).willReturn(false);  
-		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot,i_dashboard);
+		I_Flow_Class one = new Flow_Class(i_check_integer,i_check_range_angle,i_check_range_velocity,i_calc_angle,i_calc_x,i_calc_y,i_hit_check,i_nuclear_shot,i_flying_shot);
 		one.get_flow("one", "1","7","7","N","A",1,1);
 		
 		//Then :- ValidAngleRange function called one time.
