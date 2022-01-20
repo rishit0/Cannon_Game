@@ -20,10 +20,7 @@ pipeline {
             }
         }
          stage('Compile') {
-            steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/rishit0/Cannon_Game.git'
-
+             steps {
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true compile package"
 
